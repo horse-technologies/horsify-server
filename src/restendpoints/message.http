@@ -1,0 +1,30 @@
+### Get all messages
+GET http://localhost:3000/api/messages
+
+### Get message by id
+GET http://localhost:3000/api/messages/6394bf67cf58f9382836d3de
+
+### Update message by Id
+PATCH http://localhost:3000/api/messages/639cf452ba7cfa854dbfc8c5
+Content-Type: application/json
+
+{
+    "message": "Here is"
+}
+
+### Create Message
+POST http://localhost:3000/api/messages
+Content-Type: application/json
+
+{
+    "firstName": "Some",
+    "lastName": "One",
+    "otherNames": "Others",
+    "message": "This is the message",
+    "mobile": "+2343543566",
+    "email": "someone@enaiil.com", // optional
+    }
+
+### Delete message by Id
+DELETE  http://localhost:3000/api/messages/6394bf67cf58f9382836d3de
+Content-Type: application/json

@@ -1,0 +1,56 @@
+### Get all users
+GET http://localhost:3000/api/users
+
+### Get user by id
+GET http://localhost:3000/api/users/6394bf67cf58f9382836d3de
+
+### Get details of user currently logged in
+GET http://localhost:3000/api/users/profile/details
+
+### Update User by Id
+PATCH http://localhost:3000/api/users/639cf452ba7cfa854dbfc8c5
+Content-Type: application/json
+
+{
+    "country_of_birth": "Germany"
+}
+
+### Update user image
+POST http://localhost:3000/api/users/update/profile/image
+Content-Type: multipart/form-data
+
+{
+    "profileimage": "image"
+}
+
+
+### Update details of currently logged in user
+PATCH http://localhost:3000/api/users/profile/details
+Content-Type: application/json
+
+{
+    "country_of_birth": "Canada"
+}
+
+### Delete User by Id
+DELETE  http://localhost:3000/api/users/6394bf67cf58f9382836d3de
+Content-Type: application/json
+
+### Update password of currently logged in user
+PATCH http://localhost:3000/api/users/profile/change-password
+Content-Type: application/json
+
+{
+    "oldpassword": "gufdviv",
+    "newpassword": "wdfucegcfj"
+}
+
+### set password
+PATCH http://localhost:3000/api/users/profile/set-password
+Content-Type: application/json
+
+{
+    "password": "gufdviv",
+    "userId": "9i90iijijiojpopopok"
+}
+

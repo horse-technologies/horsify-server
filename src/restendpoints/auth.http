@@ -1,0 +1,58 @@
+### Signup
+POST http://localhost:3000/api/auth/register/
+Content-Type: application/json
+
+{
+    "firstName": "Mum",
+    "lastName": "Does",
+    "email": "ginanuel65@gmail.com",
+    "mobile": "+233243558202",
+    "birth_date": "2020-09-14",
+    "password": "olsennew"
+    
+}
+
+
+### Login
+POST http://localhost:3000/api/auth/login
+Content-Type: application/json
+
+{
+    "email": "ginanuel65@gmail.com",
+    "password": "olsennew"
+}
+
+### Revoke Refresh Token
+POST http://localhost:3000/api/auth/revoke-refresh-token
+Content-Type: application/json
+
+{
+    "userId": "6394bf67cf58f9382836d3de"
+
+}
+
+### Forgot Password
+POST http://localhost:3000/api/auth/forgot-password
+Content-Type: application/json
+
+{
+    "email": "hinev63911@dni8.com"
+}
+
+### Reset Password
+PATCH http://localhost:3000/api/auth/reset-password
+Content-Type: application/json
+
+{
+    "token": "878909",
+    "newpassword": "olsennews",
+
+}
+
+### Generate Access Token from refreshToken
+POST http://localhost:3000/api/auth/refresh-token
+Content-Type: application/json
+
+{
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2Mzk0YmY2N2NmNThmOTM4MjgzNmQzZGUiLCJyb2xlIjoidXNlciIsImVtYWlsIjoiY2FqYWc2MTgyOEBjZW9zaHViLmNvbSIsImZpcnN0bmFtZSI6IlRlc3QiLCJqdGkiOiI0MGMzYjRkMS04ODdiLTQzMTEtOTc2OS1mOTI5OGZmMWVkYWMiLCJpYXQiOjE2NzA3MTA5NjMsImV4cCI6MTY3MDczOTc2MywiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo5MDAxL2FwaS9hdXRoIiwic3ViIjoiSGVucnkifQ.9e1ftDWzVKT5uc-GFTtArOFJI5n_c8CPOEQAcIMfRcI"
+}
